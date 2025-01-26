@@ -1,0 +1,53 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.10.101:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
+    username: root  # 填自己的数据库用户名
+    password: 23050924@Ldy  # 填自己的数据库密码
+    hikari:
+      connection-test-query: SELECT 1 # 自动检测连接
+      connection-timeout: 60000 #数据库连接超时时间,默认30秒
+      idle-timeout: 500000 #空闲连接存活最大时间，默认600000（10分钟）
+      max-lifetime: 540000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      maximum-pool-size: 12 #连接池最大连接数，默认是10
+      minimum-idle: 10 #最小空闲连接数量
+      pool-name: SPHHikariPool # 连接池名称
+  data:
+    redis:
+      host: 192.168.10.101
+      port: 6379
+      database: 0
+  jackson:
+    time-zone: GMT+8  # 设置时区，用于date类型数据经json序列化返回到前端时所显示的时间
+#用于打印框架生成的sql语句，便于调试
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 日志
+logging:
+  file:
+    name: ./logs/lease.log
+  logback:
+    rolling policy:
+      # 设置归档文件命名格式
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
+      # 最大日志文件大小(默认为10MB)
+      max-file-size: 1MB
+      # 保存存档日志文件的最大天数(默认为7天)
+      max-history: 20
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss
+# MinIo相关配置信息
+minio:
+  endpoint: http://192.168.10.101:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: lease
+
+#springdoc打平处理
+springdoc:
+  default-flat-param-object: true
+
