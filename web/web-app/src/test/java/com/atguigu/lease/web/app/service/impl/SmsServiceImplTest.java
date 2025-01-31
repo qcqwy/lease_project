@@ -13,6 +13,6 @@ class SmsServiceImplTest {
     SmsService smsService;
     @Test
     public void send(){
-        smsService.sendCode("18357180593", "8857");
+
     }
 }

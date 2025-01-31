@@ -4,8 +4,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://192.168.10.101:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
-    username: root
-    password: 23050924@Ldy
+#    username: 你的数据库用户名
+#    password: 你的数据库密码
     hikari:
       connection-test-query: SELECT 1 # 自动检测连接
       connection-timeout: 60000 #数据库连接超时时间,默认30秒
@@ -28,9 +28,9 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 springdoc:
   default-flat-param-object: true
-
-aliyun:
-  sms:
-    access-key-id: LTAI5tQfXCdeWx3yYh12hY8G
-    access-key-secret: tIpHA5Qr2Z7falOG0bN7bnlRcJq2tr
-    endpoint: dysmsapi.aliyuncs.com
+#
+#aliyun:
+#  sms:
+#    access-key-id:
+#    access-key-secret:
+#    endpoint:
