@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 public class StringToItemTypeConvert implements Converter <String, ItemType>{
     @Override
     public ItemType convert(String code) {
+        /*这里的code参数就是前端传过来需要进行类型转换的值
+        所以这里转换器定义并添加FormatterRegistry后，所有Controller中的参数只要是ItemType类型，默认前端传过来的值都是他的code值*/
         ItemType[] values = ItemType.values();
         for(ItemType value: values){
             if(value.getCode().equals(Integer.valueOf(code))){

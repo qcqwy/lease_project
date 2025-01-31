@@ -1,0 +1,12 @@
+2025-01-25 13:07:16  INFO 13464 --- [main] c.a.l.w.a.schedule.ScheduleTasksTest     : Starting ScheduleTasksTest using Java 17.0.8 with PID 13464 (started by 33025 in D:\java\ÉÐÍ¥¹«Ô¢\lease\web\web-admin)
+2025-01-25 13:07:16  INFO 13464 --- [main] c.a.l.w.a.schedule.ScheduleTasksTest     : No active profile set, falling back to 1 default profile: "default"
+2025-01-25 13:07:17  INFO 13464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-25 13:07:17  INFO 13464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-01-25 13:07:17  INFO 13464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 Redis repository interfaces.
+2025-01-25 13:07:23  INFO 13464 --- [main] c.a.l.w.a.schedule.ScheduleTasksTest     : Started ScheduleTasksTest in 6.679 seconds (process running for 7.682)
+2025-01-25 13:07:23  WARN 13464 --- [main] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @45820e51
+2025-01-25 13:07:23  INFO 13464 --- [main] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-01-25 13:07:23  INFO 13464 --- [main] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@7552f05b
+2025-01-25 13:07:23  INFO 13464 --- [main] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-01-25 13:07:23  INFO 13464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-01-25 13:07:23  INFO 13464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.

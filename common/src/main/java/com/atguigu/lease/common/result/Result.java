@@ -2,6 +2,8 @@ package com.atguigu.lease.common.result;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+
 /**
  * 全局统一返回结果类
  */
@@ -52,5 +54,6 @@ public class Result<T> {
         result.setMessage(message);
         return result;
     }
+
 
 }
