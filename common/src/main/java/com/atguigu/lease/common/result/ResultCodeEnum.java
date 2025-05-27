@@ -10,6 +10,7 @@ public enum ResultCodeEnum {
 
     SUCCESS(200, "成功"),
     FAIL(201, "失败"),
+    APARTMENT_TRIGGER_ERROR(201, "无法更新公寓状态，因为有房间正在出租"),
     PARAM_ERROR(202, "参数不正确"),
     SERVICE_ERROR(203, "服务异常"),
     DATA_ERROR(204, "数据异常"),
@@ -37,6 +38,7 @@ public enum ResultCodeEnum {
     APP_LOGIN_CODE_EXPIRED(505, "验证码已过期"),
     APP_LOGIN_CODE_ERROR(506, "验证码错误"),
     APP_ACCOUNT_DISABLED_ERROR(507, "该用户已被禁用"),
+
 
 
     TOKEN_EXPIRED(601, "token过期"),

@@ -29,6 +29,7 @@ public class AttrController {
     public Result saveOrUpdateAttrKey(@RequestBody AttrKey attrKey) {
         boolean b = attrKeyService.saveOrUpdate(attrKey);
         return b ? Result.ok() : Result.fail();
+
     }
 
     @Operation(summary = "新增或更新属性值")

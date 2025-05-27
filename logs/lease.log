@@ -1,23 +1,207 @@
-2025-01-23 19:59:16  INFO 5476 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 5476 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
-2025-01-23 19:59:16  INFO 5476 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-01-23 19:59:17  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-01-23 19:59:17  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-01-23 19:59:17  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
-2025-01-23 19:59:18  INFO 5476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-01-23 19:59:18  INFO 5476 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
-2025-01-23 19:59:18  INFO 5476 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-01-23 19:59:18  INFO 5476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-23 19:59:18  INFO 5476 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2025-01-23 19:59:18  INFO 5476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-23 19:59:18  INFO 5476 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1206 ms
-2025-01-23 19:59:20  INFO 5476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-01-23 19:59:20  INFO 5476 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 3.613 seconds (process running for 4.094)
-2025-01-23 20:01:29  INFO 5476 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-01-23 20:01:29  INFO 5476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-01-23 20:01:29  INFO 5476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-01-23 20:01:37  INFO 5476 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
-2025-01-23 20:01:37  INFO 5476 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f13617d
-2025-01-23 20:01:37  INFO 5476 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
-2025-01-23 20:02:37  WARN 5476 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
-2025-01-23 20:20:48  INFO 5476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
-2025-01-23 20:20:48  INFO 5476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 18:41:46  INFO 3248 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 3248 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 18:41:46  INFO 3248 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 18:41:47  INFO 3248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 18:41:47  INFO 3248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 18:41:47  INFO 3248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 0 Redis repository interfaces.
+2025-05-27 18:41:48  INFO 3248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 18:41:48  INFO 3248 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 18:41:48  INFO 3248 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 18:41:48  INFO 3248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 18:41:48  INFO 3248 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 18:41:48  INFO 3248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 18:41:48  INFO 3248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2867 ms
+2025-05-27 18:41:53  INFO 3248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 18:41:53  INFO 3248 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 7.953 seconds (process running for 9.59)
+2025-05-27 18:42:07  INFO 3248 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 18:42:07  INFO 3248 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 18:42:07  INFO 3248 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-27 18:42:14  INFO 3248 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 18:42:14  INFO 3248 --- [http-nio-8080-exec-7] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cd0fcfb
+2025-05-27 18:42:14  INFO 3248 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 18:45:45  WARN 3248 --- [http-nio-8080-exec-6] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 18:52:12  INFO 3248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 18:52:12  INFO 3248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 18:52:20  INFO 6920 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 6920 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 18:52:20  INFO 6920 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 18:52:21  INFO 6920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 18:52:21  INFO 6920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 18:52:21  INFO 6920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
+2025-05-27 18:52:22  INFO 6920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 18:52:22  INFO 6920 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 18:52:22  INFO 6920 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 18:52:22  INFO 6920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 18:52:22  INFO 6920 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 18:52:23  INFO 6920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 18:52:23  INFO 6920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2410 ms
+2025-05-27 18:52:26  INFO 6920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 18:52:26  INFO 6920 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.87 seconds (process running for 7.796)
+2025-05-27 18:52:33  INFO 6920 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 18:52:33  INFO 6920 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 18:52:33  INFO 6920 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-27 18:52:33  INFO 6920 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 18:52:34  INFO 6920 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5233a4de
+2025-05-27 18:52:34  INFO 6920 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 18:52:52  WARN 6920 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 18:58:30  INFO 6920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 18:58:30  INFO 6920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 18:58:36  INFO 14212 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 14212 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 18:58:36  INFO 14212 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 18:58:37  INFO 14212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 18:58:37  INFO 14212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 18:58:37  INFO 14212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
+2025-05-27 18:58:38  INFO 14212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 18:58:38  INFO 14212 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 18:58:38  INFO 14212 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 18:58:38  INFO 14212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 18:58:38  INFO 14212 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 18:58:38  INFO 14212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 18:58:38  INFO 14212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2044 ms
+2025-05-27 18:58:41  INFO 14212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 18:58:41  INFO 14212 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.171 seconds (process running for 6.99)
+2025-05-27 18:59:11  INFO 14212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 18:59:11  INFO 14212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 18:59:11  INFO 14212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-27 18:59:11  INFO 14212 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 18:59:11  INFO 14212 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@38f11ced
+2025-05-27 18:59:11  INFO 14212 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 18:59:13  WARN 14212 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 18:59:39  INFO 14212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 18:59:39  INFO 14212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 18:59:45  INFO 21976 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 21976 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 18:59:45  INFO 21976 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 18:59:46  INFO 21976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 18:59:46  INFO 21976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 18:59:46  INFO 21976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 0 Redis repository interfaces.
+2025-05-27 18:59:47  INFO 21976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 18:59:47  INFO 21976 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 18:59:47  INFO 21976 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 18:59:47  INFO 21976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 18:59:47  INFO 21976 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 18:59:47  INFO 21976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 18:59:47  INFO 21976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2192 ms
+2025-05-27 18:59:51  INFO 21976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 18:59:51  INFO 21976 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.366 seconds (process running for 7.248)
+2025-05-27 18:59:58  INFO 21976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 18:59:58  INFO 21976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 18:59:58  INFO 21976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-27 18:59:59  INFO 21976 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 18:59:59  INFO 21976 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@29ae73c
+2025-05-27 18:59:59  INFO 21976 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 19:00:00  WARN 21976 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 19:00:21  INFO 21976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 19:00:21  INFO 21976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 19:00:26  INFO 13216 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 13216 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 19:00:26  INFO 13216 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 19:00:27  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 19:00:27  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 19:00:28  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 0 Redis repository interfaces.
+2025-05-27 19:00:28  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 19:00:28  INFO 13216 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 19:00:28  INFO 13216 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 19:00:28  INFO 13216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 19:00:28  INFO 13216 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 19:00:28  INFO 13216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 19:00:28  INFO 13216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2090 ms
+2025-05-27 19:00:32  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 19:00:32  INFO 13216 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.299 seconds (process running for 7.118)
+2025-05-27 19:00:42  INFO 13216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 19:00:42  INFO 13216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 19:00:42  INFO 13216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-27 19:00:42  INFO 13216 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 19:00:42  INFO 13216 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@510f5cd6
+2025-05-27 19:00:42  INFO 13216 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 19:00:44  WARN 13216 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 19:04:05  INFO 13216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 19:04:05  INFO 13216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 19:04:10  INFO 11996 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 11996 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 19:04:11  INFO 11996 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 19:04:12  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 19:04:12  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 19:04:12  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
+2025-05-27 19:04:13  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 19:04:13  INFO 11996 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 19:04:13  INFO 11996 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 19:04:13  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 19:04:13  INFO 11996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 19:04:13  INFO 11996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 19:04:13  INFO 11996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2138 ms
+2025-05-27 19:04:16  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 19:04:16  INFO 11996 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.52 seconds (process running for 7.394)
+2025-05-27 19:04:37  INFO 11996 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 19:04:37  INFO 11996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 19:04:37  INFO 11996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-27 19:04:37  INFO 11996 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 19:04:37  INFO 11996 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@581456ae
+2025-05-27 19:04:37  INFO 11996 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 19:04:39  WARN 11996 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 19:06:22  INFO 11996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 19:06:22  INFO 11996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 19:06:28  INFO 14024 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 14024 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 19:06:28  INFO 14024 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 19:06:29  INFO 14024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 19:06:29  INFO 14024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 19:06:29  INFO 14024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2025-05-27 19:06:30  INFO 14024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 19:06:30  INFO 14024 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 19:06:30  INFO 14024 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 19:06:30  INFO 14024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 19:06:30  INFO 14024 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 19:06:30  INFO 14024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 19:06:30  INFO 14024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2068 ms
+2025-05-27 19:06:33  INFO 14024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 19:06:33  INFO 14024 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.171 seconds (process running for 6.981)
+2025-05-27 19:06:42  INFO 14024 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 19:06:42  INFO 14024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 19:06:42  INFO 14024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-27 19:06:42  INFO 14024 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 19:06:42  INFO 14024 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b336654
+2025-05-27 19:06:42  INFO 14024 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 19:06:45  WARN 14024 --- [http-nio-8080-exec-3] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 19:12:01  INFO 14024 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 19:12:01  INFO 14024 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 19:12:07  INFO 1852 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 1852 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 19:12:07  INFO 1852 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 19:12:08  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 19:12:08  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 19:12:08  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 0 Redis repository interfaces.
+2025-05-27 19:12:09  INFO 1852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 19:12:09  INFO 1852 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 19:12:09  INFO 1852 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 19:12:09  INFO 1852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 19:12:09  INFO 1852 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 19:12:09  INFO 1852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 19:12:09  INFO 1852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2023 ms
+2025-05-27 19:12:13  INFO 1852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 19:12:13  INFO 1852 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.155 seconds (process running for 6.995)
+2025-05-27 19:12:24  INFO 1852 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 19:12:24  INFO 1852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 19:12:24  INFO 1852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-27 19:12:24  WARN 1852 --- [http-nio-8080-exec-1] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 19:12:24  INFO 1852 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 19:12:24  INFO 1852 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@4437a880
+2025-05-27 19:12:24  INFO 1852 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 19:21:48  INFO 1852 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 19:21:48  INFO 1852 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.
+2025-05-27 19:21:55  INFO 19884 --- [main] com.atguigu.lease.AdminWebApplication    : Starting AdminWebApplication using Java 17.0.8 with PID 19884 (D:\java\尚庭公寓\lease\web\web-admin\target\classes started by 33025 in D:\java\尚庭公寓\lease)
+2025-05-27 19:21:55  INFO 19884 --- [main] com.atguigu.lease.AdminWebApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-27 19:21:56  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-27 19:21:56  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-27 19:21:56  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 Redis repository interfaces.
+2025-05-27 19:21:57  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-27 19:21:57  INFO 19884 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+2025-05-27 19:21:57  INFO 19884 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-27 19:21:57  INFO 19884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-27 19:21:57  INFO 19884 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-27 19:21:57  INFO 19884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-27 19:21:57  INFO 19884 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2131 ms
+2025-05-27 19:22:01  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-27 19:22:01  INFO 19884 --- [main] com.atguigu.lease.AdminWebApplication    : Started AdminWebApplication in 6.374 seconds (process running for 7.147)
+2025-05-27 19:22:30  INFO 19884 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 19:22:30  INFO 19884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-27 19:22:30  INFO 19884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-27 19:22:30  INFO 19884 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Starting...
+2025-05-27 19:22:31  INFO 19884 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : SPHHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@29c7a9e3
+2025-05-27 19:22:31  INFO 19884 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Start completed.
+2025-05-27 19:22:34  WARN 19884 --- [http-nio-8080-exec-10] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @43c1b556
+2025-05-27 19:22:59  INFO 19884 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown initiated...
+2025-05-27 19:22:59  INFO 19884 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SPHHikariPool - Shutdown completed.

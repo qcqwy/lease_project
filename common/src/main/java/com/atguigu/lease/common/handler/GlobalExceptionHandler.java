@@ -13,11 +13,19 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.sql.SQLException;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Result exception(Exception e){
+        //专门处理触发器抛出的SQLException异常
+        if(e.getCause() instanceof SQLException){
+            SQLException sqlException = (SQLException) e.getCause();
+            return Result.build(201, sqlException.getMessage());
+        }
+
         e.printStackTrace();
         return Result.fail();
     }

@@ -29,7 +29,6 @@ public class StringToBaseEnumConvertFactory implements ConverterFactory<String, 
             @Override
             public T convert(String code) {
                 //通过反射，获取目标类的所有枚举对象
-
                 for(T enumType: targetType.getEnumConstants()){
                     if(enumType.getCode().equals(Integer.valueOf(code))){
                         return enumType;

@@ -26,7 +26,6 @@ public class FileUploadController {
             String url = fileService.upload(file);
             return Result.ok(url);
         }catch (Exception e){
-//            e.printStackTrace();
             return Result.fail();
         }
 

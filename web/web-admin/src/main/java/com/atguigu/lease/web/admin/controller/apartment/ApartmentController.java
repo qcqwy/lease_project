@@ -2,6 +2,7 @@ package com.atguigu.lease.web.admin.controller.apartment;
 
 
 import com.atguigu.lease.common.result.Result;
+import com.atguigu.lease.common.result.ResultCodeEnum;
 import com.atguigu.lease.model.entity.ApartmentInfo;
 import com.atguigu.lease.model.enums.ReleaseStatus;
 import com.atguigu.lease.web.admin.service.ApartmentInfoService;
@@ -17,9 +18,11 @@ import com.google.j2objc.annotations.AutoreleasePool;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jdk.jshell.Snippet;
+import org.apache.ibatis.jdbc.SQL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Stack;
 
@@ -57,8 +60,22 @@ public class ApartmentController {
     @Operation(summary = "根据id删除公寓信息")
     @DeleteMapping("removeById")
     public Result removeById(@RequestParam Long id) {
-        apartmentInfoService.removeApartmentById(id);
+        //使用触发器完成删除操作
+        LambdaUpdateWrapper<ApartmentInfo> wrapper = new LambdaUpdateWrapper<>();
+        wrapper.set(ApartmentInfo::getIsDeleted, 1);
+        wrapper.eq(ApartmentInfo::getId, id);
+        try{
+           apartmentInfoService.update(wrapper);
+        }catch (Exception e){
+            if(e.getCause() instanceof SQLException){
+                SQLException sqlException = (SQLException) e.getCause();
+                return Result.build(201, sqlException.getMessage());
+            }
+        }
+
         return Result.ok();
+//        apartmentInfoService.removeApartmentById(id);
+//        return Result.ok();
     }
 
     @Operation(summary = "根据id修改公寓发布状态")
@@ -67,7 +84,16 @@ public class ApartmentController {
         LambdaUpdateWrapper<ApartmentInfo> wrapper = new LambdaUpdateWrapper<>();
         wrapper.eq(ApartmentInfo::getId, id);
         wrapper.set(ApartmentInfo::getIsRelease, status);
-        apartmentInfoService.update(wrapper);
+        try{
+            apartmentInfoService.update(wrapper);
+        }catch(Exception e){
+            if(e.getCause() instanceof SQLException){
+                SQLException sqlException = (SQLException) e.getCause();
+                return Result.build(201, sqlException.getMessage());
+            }
+            return Result.fail();
+        }
+
         return Result.ok();
     }
 

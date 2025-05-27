@@ -15,10 +15,12 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.apache.ibatis.jdbc.SQL;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Tag(name = "房间信息管理")
@@ -53,8 +55,23 @@ public class RoomController {
     @Operation(summary = "根据id删除房间信息")
     @DeleteMapping("removeById")
     public Result removeById(@RequestParam Long id) {
-        roomInfoService.removeRoomById(id);
+        //使用触发器
+        LambdaUpdateWrapper<RoomInfo> wrapper = new LambdaUpdateWrapper();
+        wrapper.set(RoomInfo::getIsDeleted, 1);
+        wrapper.eq(RoomInfo::getId, id);
+        try{
+            roomInfoService.update(wrapper);
+        }catch (Exception e){
+            throw e;
+//            if(e.getCause() instanceof SQLException){
+//                SQLException sqlException = (SQLException) e.getCause();
+//                return Result.build(201, sqlException.getMessage());
+//            }
+        }
         return Result.ok();
+
+//        roomInfoService.removeRoomById(id);
+//        return Result.ok();
     }
 
     @Operation(summary = "根据id修改房间发布状态")
@@ -63,7 +80,16 @@ public class RoomController {
         LambdaUpdateWrapper<RoomInfo> wrapper = new LambdaUpdateWrapper<>();
         wrapper.eq(RoomInfo::getId, id);
         wrapper.set(RoomInfo::getIsRelease, status);
-        roomInfoService.update(wrapper);
+        try{
+            roomInfoService.update(wrapper);
+        }
+        catch(Exception e){
+            if(e.getCause() instanceof SQLException){
+                SQLException sqlException = (SQLException)e.getCause();
+                return Result.build(201, sqlException.getMessage());
+            }
+            return Result.fail();
+        }
         return Result.ok();
     }
 
